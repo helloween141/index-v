@@ -1,0 +1,29 @@
+{
+  "name": "Vpanel",
+  "menu": {
+    "title": "Система",
+    "icon": "fa-solid fa-key",
+    "list": [
+      {
+        "model": "User",
+        "title": "Пользователи"
+      },
+      {
+        "model": "Role",
+        "title": "Роли"
+      }
+    ]
+  },
+  "alias": "vpanel",
+  "description": "",
+  "keywords": [],
+  "priority": 0,
+  "providers": [
+    "Modules\\Vpanel\\Providers\\VpanelServiceProvider",
+    "Modules\\Vpanel\\Providers\\BootModelServiceProvider",
+    "Modules\\Vpanel\\Providers\\ScheduleServiceProvider"
+  ],
+  "aliases": {},
+  "files": [],
+  "requires": []
+}

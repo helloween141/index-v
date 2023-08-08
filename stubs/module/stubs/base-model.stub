@@ -1,0 +1,17 @@
+<?php
+
+namespace $NAMESPACE$\base;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Modules\Vpanel\Core\BaseModel;
+use Modules\Vpanel\Core\ModelStructure;
+
+class $CLASS$ extends BaseModel
+{
+    use SoftDeletes;
+
+    public static function defineStructure(): ModelStructure
+    {
+       return ModelStructure::create();
+    }
+}

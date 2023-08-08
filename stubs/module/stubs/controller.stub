@@ -1,0 +1,15 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class $CLASS$ extends Controller
+{
+    public function index()
+    {
+        return view('$LOWER_NAME$::index');
+    }
+}

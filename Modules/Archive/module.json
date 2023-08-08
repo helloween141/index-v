@@ -1,0 +1,27 @@
+{
+  "name": "Archive",
+  "menu": {
+    "title": "Файловый архив",
+    "icon": "fa-solid fa-archive",
+    "list": [
+      {
+        "model": "File",
+        "title": "Файлы"
+      },
+      {
+        "model": "Image",
+        "title": "Изображения"
+      }
+    ]
+  },
+  "alias": "archive",
+  "description": "",
+  "keywords": [],
+  "priority": 0,
+  "providers": [
+    "Modules\\Archive\\Providers\\ArchiveServiceProvider"
+  ],
+  "aliases": {},
+  "files": [],
+  "requires": []
+}

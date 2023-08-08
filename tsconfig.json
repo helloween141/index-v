@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "Modules/Vpanel/Resources/scripts/*"
+      ]
+    }
+  }
+}

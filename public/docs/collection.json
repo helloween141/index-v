@@ -1,0 +1,1965 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/arm-stroy.test"
+        }
+    ],
+    "info": {
+        "name": "Arm-Stroy",
+        "_postman_id": "faa35302-9983-48b2-9598-3794ceb1f990",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/:moduleName\/:modelName\/get-structure\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/:moduleName\/:modelName\/get-structure\/:id",
+                            "variable": [
+                                {
+                                    "id": "moduleName",
+                                    "key": "moduleName",
+                                    "value": "inventore",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "modelName",
+                                    "key": "modelName",
+                                    "value": "iusto",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quia",
+                                    "description": "The ID of the ."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a \u0437\u0430\u043f\u0438\u0441\u0435\u0439 \u0432 \u0442\u0430\u0431\u043b\u0438\u0447\u043d\u043e\u043c \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0438",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/:moduleName\/:modelName\/get-list",
+                            "query": [
+                                {
+                                    "key": "search",
+                                    "value": "molestias",
+                                    "description": "\u0422\u0435\u043a\u0441\u0442 \u0434\u043b\u044f \u043f\u043e\u0438c\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "2",
+                                    "description": "\u041d\u043e\u043c\u0435\u0440 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/:moduleName\/:modelName\/get-list?search=molestias&page=2",
+                            "variable": [
+                                {
+                                    "id": "moduleName",
+                                    "key": "moduleName",
+                                    "value": "nulla",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "modelName",
+                                    "key": "modelName",
+                                    "value": "repellat",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u0430\u043f\u0438\u0441\u044c",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/:moduleName\/:modelName\/get-record\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/:moduleName\/:modelName\/get-record\/:id",
+                            "variable": [
+                                {
+                                    "id": "moduleName",
+                                    "key": "moduleName",
+                                    "value": "quia",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "modelName",
+                                    "key": "modelName",
+                                    "value": "temporibus",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "sit",
+                                    "description": "The ID of the ."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u0437\u0430\u043f\u0438\u0441\u044c",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/:moduleName\/:modelName\/save-record\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/:moduleName\/:modelName\/save-record\/:id",
+                            "variable": [
+                                {
+                                    "id": "moduleName",
+                                    "key": "moduleName",
+                                    "value": "ut",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "modelName",
+                                    "key": "modelName",
+                                    "value": "voluptatem",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "unde",
+                                    "description": "The ID of the ."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u0443\u044e \u0437\u0430\u043f\u0438\u0441\u044c",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/:moduleName\/:modelName\/restore-record\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/:moduleName\/:modelName\/restore-record\/:id",
+                            "variable": [
+                                {
+                                    "id": "moduleName",
+                                    "key": "moduleName",
+                                    "value": "sunt",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "modelName",
+                                    "key": "modelName",
+                                    "value": "eos",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consectetur",
+                                    "description": "The ID of the ."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c \u0437\u0430\u043f\u0438\u0441\u044c",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/:moduleName\/:modelName\/delete-record\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/:moduleName\/:modelName\/delete-record\/:id",
+                            "variable": [
+                                {
+                                    "id": "moduleName",
+                                    "key": "moduleName",
+                                    "value": "rerum",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "modelName",
+                                    "key": "modelName",
+                                    "value": "voluptatem",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "quia",
+                                    "description": "The ID of the delete record."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0414\u0421. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/account\/get-admission-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/account\/get-admission-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0414\u0421. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/account\/get-transfer-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/account\/get-transfer-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0414\u0421. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/account\/get-writeoff-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/account\/get-writeoff-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0414\u0421. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/account\/create-admission",
+                            "query": [
+                                {
+                                    "key": "total",
+                                    "value": "1689.050604",
+                                    "description": "\u0421\u0443\u043c\u043c\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "account",
+                                    "value": "1",
+                                    "description": "ID \u0441\u0447\u0435\u0442\u0430\n\u041f\u0435\u0440\u0435\u0432\u043e\u0434\u0438\u0442\u044c \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430 \u043c\u043e\u0436\u043d\u043e \u0442\u043e\u043b\u044c\u043a\u043e \u043d\u0430 \u0441\u0447\u0435\u0442\u0430 \u0441 \u0442\u0438\u043f\u043e\u043c \"cash\" (\u043e\u0441\u043d\u043e\u0432\u043d\u043e\u0439 \u0441\u0447\u0435\u0442)",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/account\/create-admission?total=1689.050604&account=1"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0414\u0421. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/account\/create-transfer",
+                            "query": [
+                                {
+                                    "key": "total",
+                                    "value": "25.52215087",
+                                    "description": "\u0421\u0443\u043c\u043c\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "account",
+                                    "value": "4",
+                                    "description": "ID \u0441\u0447\u0435\u0442\u0430 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "to_account",
+                                    "value": "6",
+                                    "description": "ID \u0446\u0435\u043b\u0435\u0432\u043e\u0433\u043e \u0441\u0447\u0435\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "1",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430\n\u041f\u0435\u0440\u0435\u0434\u0430\u0435\u0442\u0441\u044f \u043b\u0438\u0431\u043e to_account, \u043b\u0438\u0431\u043e employee",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/account\/create-transfer?total=25.52215087&account=4&to_account=6&employee=1"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0414\u0421. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/account\/create-writeoff",
+                            "query": [
+                                {
+                                    "key": "total",
+                                    "value": "5528",
+                                    "description": "\u0421\u0443\u043c\u043c\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "account",
+                                    "value": "2",
+                                    "description": "ID \u0441\u0447\u0435\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "provider",
+                                    "value": "8",
+                                    "description": "ID \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "5",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "reason",
+                                    "value": "13",
+                                    "description": "ID \u043e\u0441\u043d\u043e\u0432\u0430\u043d\u0438\u044f",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "description_reason",
+                                    "value": "13",
+                                    "description": "text \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043f\u0440\u0438\u0447\u0438\u043d\u044b\n\n\u0415\u0441\u043b\u0438 account \u043f\u0440\u0438\u0432\u044f\u0437\u0430\u043d \u043a \u0441\u043a\u043b\u0430\u0434\u0443 \u0438\u043b\u0438 \u043e\u0431\u044a\u0435\u043a\u0442\u0443 (\u043f\u043e\u043b\u044f building \u0438\u043b\u0438 store \u043d\u0435 \u043f\u0443\u0441\u0442\u044b\u0435), \u0442\u043e \u043f\u0435\u0440\u0435\u0434\u0430\u0435\u0442\u0441\u044f ID \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0430\n\n\u0415\u0441\u043b\u0438 reason === 'salary_payment', \u0442\u043e \u043f\u0435\u0440\u0435\u0434\u0430\u0435\u0442\u0441\u044f ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430\n\n\u0415\u0441\u043b\u0438 reason === 'other', \u0442\u043e \u043f\u0435\u0440\u0435\u0434\u0430\u0435\u0442\u0441\u044f description_reason",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/account\/create-writeoff?total=5528&account=2&provider=8&employee=5&reason=13&description_reason=13"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u043e\u043f\u0440\u0438\u0445\u043e\u0434\u043e\u0432\u0430\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/get-capitalize-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/get-capitalize-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/get-transfer-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/get-transfer-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/get-writeoff-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/get-writeoff-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u0440\u0435\u043c\u043e\u043d\u0442\u0443",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/get-repair-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/get-repair-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u0432\u043e\u0437\u0432\u0440\u0430\u0442\u0443 \u0441 \u0440\u0435\u043c\u043e\u043d\u0442\u0430",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/get-return-repair-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/get-return-repair-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043e\u043f\u0440\u0438\u0445\u043e\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/create-capitalize",
+                            "query": [
+                                {
+                                    "key": "provider",
+                                    "value": "12",
+                                    "description": "ID \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "store",
+                                    "value": "15",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "building",
+                                    "value": "6",
+                                    "description": "ID \u043e\u0431\u044a\u0435\u043a\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "3",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "voluptatum",
+                                    "description": "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "income_price",
+                                    "value": "127.457291974",
+                                    "description": "\u0426\u0435\u043d\u0430 \u0437\u0430\u043a\u0443\u043f\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "photo",
+                                    "value": "eum",
+                                    "description": "file \u0424\u043e\u0442\u043e",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/create-capitalize?provider=12&store=15&building=6&employee=3&name=voluptatum&income_price=127.457291974&photo=eum"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/create-transfer",
+                            "query": [
+                                {
+                                    "key": "tool",
+                                    "value": "10",
+                                    "description": "ID \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "building",
+                                    "value": "2",
+                                    "description": "ID \u043e\u0431\u044a\u0435\u043a\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "5",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "store",
+                                    "value": "7",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/create-transfer?tool=10&building=2&employee=5&store=7"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/create-writeoff",
+                            "query": [
+                                {
+                                    "key": "store",
+                                    "value": "3",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "tool",
+                                    "value": "18",
+                                    "description": "ID \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "reason",
+                                    "value": "voluptas",
+                                    "description": "\u041f\u0440\u0438\u0447\u0438\u043d\u0430 \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u044f",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/create-writeoff?store=3&tool=18&reason=voluptas"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0437\u0430\u044f\u0432\u043a\u0443 \u043d\u0430 \u0440\u0435\u043c\u043e\u043d\u0442",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/create-repair",
+                            "query": [
+                                {
+                                    "key": "store",
+                                    "value": "17",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "tool",
+                                    "value": "1",
+                                    "description": "ID \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "repairing_organization",
+                                    "value": "sit",
+                                    "description": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0438, \u043e\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043b\u044f\u044e\u0449\u0435\u0439 \u0440\u0435\u043c\u043e\u043d\u0442",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/create-repair?store=17&tool=1&repairing_organization=sit"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442. \u041e\u0444\u043e\u0440\u043c\u0438\u0442\u044c \u0432\u043e\u0437\u0432\u0440\u0430\u0442 \u0441 \u0440\u0435\u043c\u043e\u043d\u0442\u0430",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/tool\/create-return-repair",
+                            "query": [
+                                {
+                                    "key": "store",
+                                    "value": "6",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "tool",
+                                    "value": "8",
+                                    "description": "ID \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/tool\/create-return-repair?store=6&tool=8"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u043e\u043f\u0440\u0438\u0445\u043e\u0434\u043e\u0432\u0430\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/material\/get-capitalize-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/material\/get-capitalize-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/material\/get-transfer-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/material\/get-transfer-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b. \u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u044f \u043f\u043e \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u044e",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/material\/get-writeoff-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/material\/get-writeoff-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043e\u043f\u0440\u0438\u0445\u043e\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/material\/create-capitalize",
+                            "query": [
+                                {
+                                    "key": "provider",
+                                    "value": "1",
+                                    "description": "ID \u043f\u043e\u0441\u0442\u0430\u0432\u0449\u0438\u043a\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "store",
+                                    "value": "14",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "building",
+                                    "value": "8",
+                                    "description": "ID \u043e\u0431\u044a\u0435\u043a\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "16",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/material\/create-capitalize?provider=1&store=14&building=8&employee=16"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/material\/create-transfer",
+                            "query": [
+                                {
+                                    "key": "material",
+                                    "value": "8",
+                                    "description": "ID \u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "building_from",
+                                    "value": "18",
+                                    "description": "ID \u043e\u0431\u044a\u0435\u043a\u0442\u0430 (\u043e\u0442\u043a\u0443\u0434\u0430)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee_from",
+                                    "value": "12",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430 (\u043e\u0442\u043a\u0443\u0434\u0430)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "store_from",
+                                    "value": "3",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430 (\u043e\u0442\u043a\u0443\u0434\u0430)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "building",
+                                    "value": "1",
+                                    "description": "ID \u043e\u0431\u044a\u0435\u043a\u0442\u0430 (\u043a\u0443\u0434\u0430)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "9",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430 (\u043a\u0443\u0434\u0430)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "store",
+                                    "value": "20",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430 (\u043a\u0443\u0434\u0430)",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "amount",
+                                    "value": "11",
+                                    "description": "\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/material\/create-transfer?material=8&building_from=18&employee_from=12&store_from=3&building=1&employee=9&store=20&amount=11"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b. \u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/material\/create-writeoff",
+                            "query": [
+                                {
+                                    "key": "material",
+                                    "value": "15",
+                                    "description": "ID \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "store",
+                                    "value": "17",
+                                    "description": "ID \u0441\u043a\u043b\u0430\u0434\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "building",
+                                    "value": "1",
+                                    "description": "ID \u043e\u0431\u044a\u0435\u043a\u0442\u0430",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "employee",
+                                    "value": "7",
+                                    "description": "ID \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/device\/material\/create-writeoff?material=15&store=17&building=1&employee=7"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u0442\u0435\u043a\u0443\u0449\u0435\u043c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/user\/get-info",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/user\/get-info"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0432\u0438\u0434\u0436\u0435\u0442\u044b \u0434\u043b\u044f \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/user\/get-widgets",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/user\/get-widgets"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 400,
+                            "body": "{\"error\":{\"code\":2002,\"message\":\"\\u0423\\u0441\\u0442\\u0440\\u043e\\u0439\\u0441\\u0442\\u0432\\u043e \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d\\u043e\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u043f\u0438\u043d-\u043a\u043e\u0434",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/user\/set-pin",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/user\/set-pin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"pin\":\"corrupti\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0412\u043e\u0439\u0442\u0438 \u043f\u043e \u043f\u0438\u043d-\u043a\u043e\u0434\u0443 \u0438\u043b\u0438 \u043e\u0442\u043f\u0435\u0447\u0430\u0442\u043a\u0443 \u043f\u0430\u043b\u044c\u0446\u0435\u0432",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/user\/enter-pin",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/user\/enter-pin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"pin\":\"earum\",\"fingerprint\":false}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "\u0410\u0432\u0442\u043e\u0440\u0438\u0437\u043e\u0432\u0430\u0442\u044c \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/device\/user\/auth",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/device\/user\/auth"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "auth-token",
+                                "value": "auth-token (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            },
+                            {
+                                "key": "device-id",
+                                "value": "device-id (\u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044f \/user\/auth)"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"login\":\"ea\",\"password\":\"{GzC1enp=o\",\"device_id\":\"quidem\",\"device_model\":\"dignissimos\",\"app_version\":\"expedita\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

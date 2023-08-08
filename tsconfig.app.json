@@ -1,0 +1,26 @@
+{
+    "include": [
+        "env.d.ts",
+        "Modules/Vpanel/Resources/scripts/**/*",
+        "Modules/Vpanel/Resources/scripts/**/*.vue",
+        "Modules/Vpanel/Resources/scripts/**/*.json"
+    ],
+    "exclude": [
+        "Modules/Vpanel/Resources/scripts/**/__tests__/*"
+    ],
+    "compilerOptions": {
+        "composite": true,
+        "lib": [
+            "es2016"
+        ],
+        "module": "es2022",
+        "moduleResolution": "Node",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./Modules/Vpanel/Resources/scripts/*"
+            ]
+        },
+      "allowSyntheticDefaultImports": true
+    }
+}

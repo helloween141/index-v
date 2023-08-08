@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.v-select .vs__dropdown-toggle{
+    border: none;
+}

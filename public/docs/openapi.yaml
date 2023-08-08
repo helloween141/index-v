@@ -1,0 +1,2337 @@
+openapi: 3.0.3
+info:
+  title: Arm-Stroy
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://arm-stroy.test'
+paths:
+  '/api/device/{moduleName}/{modelName}/get-structure/{id}':
+    get:
+      summary: 'Получить интерфейс'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: moduleName
+        description: ''
+        example: inventore
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: modelName
+        description: ''
+        example: iusto
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: quia
+  '/api/device/{moduleName}/{modelName}/get-list':
+    get:
+      summary: 'Получить список записей в табличном представлении'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: filter
+          description: "Фильтр (в формате json)\n- Числовые поля и даты.\n  Передается массив: \"date\": [{\"comparsion\":\">=\", \"value\":\"1\"},{\"comparsion\":\"<=\",\"value\":\"10\"}]\n  (при этом не обязательно указывать начальное или конечное значение)\n- Поля типа pointer: передается массив из id соответствующих записей: \"author\": [1, 4, 5]\n- Поля типа select: передается объект вида: \"type\": {\"id\": \"test-type\"}, где id - это соответствующий ключ\n- Для остальных типов передается обычная пара ключ-значение\n- Общий пример: \"filter\": {\"title\":\"Farrel\",\"price\":[{\"comparsion\":\">=\",\"value\":\"100\"}],\"date\":[{\"comparsion\":\">=\",\"value\":\"2022-12-29\"},{\"comparsion\":\"<=\",\"value\":\"2023-01-15\"}],\"author\":[1,4],\"type\":{\"id\":\"type2\",\"label\":\"Тип 2\"},\"show\":1}"
+          example: []
+          required: false
+          schema:
+            type: object
+            description: "Фильтр (в формате json)\n- Числовые поля и даты.\n  Передается массив: \"date\": [{\"comparsion\":\">=\", \"value\":\"1\"},{\"comparsion\":\"<=\",\"value\":\"10\"}]\n  (при этом не обязательно указывать начальное или конечное значение)\n- Поля типа pointer: передается массив из id соответствующих записей: \"author\": [1, 4, 5]\n- Поля типа select: передается объект вида: \"type\": {\"id\": \"test-type\"}, где id - это соответствующий ключ\n- Для остальных типов передается обычная пара ключ-значение\n- Общий пример: \"filter\": {\"title\":\"Farrel\",\"price\":[{\"comparsion\":\">=\",\"value\":\"100\"}],\"date\":[{\"comparsion\":\">=\",\"value\":\"2022-12-29\"},{\"comparsion\":\"<=\",\"value\":\"2023-01-15\"}],\"author\":[1,4],\"type\":{\"id\":\"type2\",\"label\":\"Тип 2\"},\"show\":1}"
+            example: []
+            properties: []
+        -
+          in: query
+          name: search
+          description: 'Текст для поиcка'
+          example: molestias
+          required: false
+          schema:
+            type: string
+            description: 'Текст для поиcка'
+            example: molestias
+        -
+          in: query
+          name: page
+          description: 'Номер страницы'
+          example: 2
+          required: false
+          schema:
+            type: integer
+            description: 'Номер страницы'
+            example: 2
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: moduleName
+        description: ''
+        example: nulla
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: modelName
+        description: ''
+        example: repellat
+        required: true
+        schema:
+          type: string
+  '/api/device/{moduleName}/{modelName}/get-record/{id}':
+    get:
+      summary: 'Получить запись'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: moduleName
+        description: ''
+        example: quia
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: modelName
+        description: ''
+        example: temporibus
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: sit
+  '/api/device/{moduleName}/{modelName}/save-record/{id}':
+    post:
+      summary: 'Сохранить запись'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: moduleName
+        description: ''
+        example: ut
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: modelName
+        description: ''
+        example: voluptatem
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: unde
+  '/api/device/{moduleName}/{modelName}/restore-record/{id}':
+    patch:
+      summary: 'Восстановить удаленную запись'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: moduleName
+        description: ''
+        example: sunt
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: modelName
+        description: ''
+        example: eos
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'Optional parameter. The ID of the .'
+        required: true
+        schema:
+          type: string
+        examples:
+          omitted:
+            summary: 'When the value is omitted'
+            value: ''
+          present:
+            summary: 'When the value is present'
+            value: consectetur
+  '/api/device/{moduleName}/{modelName}/delete-record/{id}':
+    delete:
+      summary: 'Удалить запись'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: moduleName
+        description: ''
+        example: rerum
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: modelName
+        description: ''
+        example: voluptatem
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'The ID of the delete record.'
+        example: quia
+        required: true
+        schema:
+          type: string
+  /api/device/account/get-admission-data:
+    get:
+      summary: 'ДС. Получить значения по поступлению'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/account/get-transfer-data:
+    get:
+      summary: 'ДС. Получить значения по перемещению'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/account/get-writeoff-data:
+    get:
+      summary: 'ДС. Получить значения по списанию'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/account/create-admission:
+    post:
+      summary: 'ДС. Создать поступление'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: total
+          description: Сумма
+          example: 1689.050604
+          required: true
+          schema:
+            type: number
+            description: Сумма
+            example: 1689.050604
+        -
+          in: query
+          name: account
+          description: "ID счета\nПереводить средства можно только на счета с типом \"cash\" (основной счет)"
+          example: 1
+          required: true
+          schema:
+            type: integer
+            description: "ID счета\nПереводить средства можно только на счета с типом \"cash\" (основной счет)"
+            example: 1
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/account/create-transfer:
+    post:
+      summary: 'ДС. Создать перемещение'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: total
+          description: Сумма
+          example: 25.52215087
+          required: true
+          schema:
+            type: number
+            description: Сумма
+            example: 25.52215087
+        -
+          in: query
+          name: account
+          description: 'ID счета источника'
+          example: 4
+          required: true
+          schema:
+            type: integer
+            description: 'ID счета источника'
+            example: 4
+        -
+          in: query
+          name: to_account
+          description: 'ID целевого счета'
+          example: 6
+          required: false
+          schema:
+            type: integer
+            description: 'ID целевого счета'
+            example: 6
+        -
+          in: query
+          name: employee
+          description: "ID сотрудника\nПередается либо to_account, либо employee"
+          example: 1
+          required: false
+          schema:
+            type: integer
+            description: "ID сотрудника\nПередается либо to_account, либо employee"
+            example: 1
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/account/create-writeoff:
+    post:
+      summary: 'ДС. Создать списание'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: total
+          description: Сумма
+          example: 5528.0
+          required: true
+          schema:
+            type: number
+            description: Сумма
+            example: 5528.0
+        -
+          in: query
+          name: account
+          description: 'ID счета'
+          example: 2
+          required: true
+          schema:
+            type: integer
+            description: 'ID счета'
+            example: 2
+        -
+          in: query
+          name: provider
+          description: 'ID поставщика'
+          example: 8
+          required: false
+          schema:
+            type: integer
+            description: 'ID поставщика'
+            example: 8
+        -
+          in: query
+          name: employee
+          description: 'ID сотрудника'
+          example: 5
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника'
+            example: 5
+        -
+          in: query
+          name: reason
+          description: 'ID основания'
+          example: 13
+          required: false
+          schema:
+            type: integer
+            description: 'ID основания'
+            example: 13
+        -
+          in: query
+          name: description_reason
+          description: "text описание причины\n\nЕсли account привязан к складу или объекту (поля building или store не пустые), то передается ID поставщика\n\nЕсли reason === 'salary_payment', то передается ID сотрудника\n\nЕсли reason === 'other', то передается description_reason"
+          example: 13
+          required: false
+          schema:
+            type: integer
+            description: "text описание причины\n\nЕсли account привязан к складу или объекту (поля building или store не пустые), то передается ID поставщика\n\nЕсли reason === 'salary_payment', то передается ID сотрудника\n\nЕсли reason === 'other', то передается description_reason"
+            example: 13
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/get-capitalize-data:
+    get:
+      summary: 'Инструмент. Получить значения по оприходованию'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/get-transfer-data:
+    get:
+      summary: 'Инструмент. Получить значения по перемещению'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/get-writeoff-data:
+    get:
+      summary: 'Инструмент. Получить значения по списанию'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/get-repair-data:
+    get:
+      summary: 'Инструмент. Получить значения по ремонту'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/get-return-repair-data:
+    get:
+      summary: 'Инструмент. Получить значения по возврату с ремонта'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/create-capitalize:
+    post:
+      summary: 'Инструмент. Создать оприходование'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: provider
+          description: 'ID поставщика'
+          example: 12
+          required: true
+          schema:
+            type: integer
+            description: 'ID поставщика'
+            example: 12
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 15
+          required: true
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 15
+        -
+          in: query
+          name: building
+          description: 'ID объекта'
+          example: 6
+          required: false
+          schema:
+            type: integer
+            description: 'ID объекта'
+            example: 6
+        -
+          in: query
+          name: employee
+          description: 'ID сотрудника'
+          example: 3
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника'
+            example: 3
+        -
+          in: query
+          name: name
+          description: 'Название инструмента'
+          example: voluptatum
+          required: true
+          schema:
+            type: string
+            description: 'Название инструмента'
+            example: voluptatum
+        -
+          in: query
+          name: income_price
+          description: 'Цена закупа'
+          example: 127.457291974
+          required: true
+          schema:
+            type: number
+            description: 'Цена закупа'
+            example: 127.457291974
+        -
+          in: query
+          name: photo
+          description: 'file Фото'
+          example: eum
+          required: false
+          schema:
+            type: string
+            description: 'file Фото'
+            example: eum
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/create-transfer:
+    post:
+      summary: 'Инструмент. Создать перемещение'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: tool
+          description: 'ID инструмента'
+          example: 10
+          required: true
+          schema:
+            type: integer
+            description: 'ID инструмента'
+            example: 10
+        -
+          in: query
+          name: building
+          description: 'ID объекта'
+          example: 2
+          required: true
+          schema:
+            type: integer
+            description: 'ID объекта'
+            example: 2
+        -
+          in: query
+          name: employee
+          description: 'ID сотрудника'
+          example: 5
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника'
+            example: 5
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 7
+          required: false
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 7
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/create-writeoff:
+    post:
+      summary: 'Инструмент. Создать списание'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 3
+          required: true
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 3
+        -
+          in: query
+          name: tool
+          description: 'ID инструмента'
+          example: 18
+          required: true
+          schema:
+            type: integer
+            description: 'ID инструмента'
+            example: 18
+        -
+          in: query
+          name: reason
+          description: 'Причина списания'
+          example: voluptas
+          required: true
+          schema:
+            type: string
+            description: 'Причина списания'
+            example: voluptas
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/create-repair:
+    post:
+      summary: 'Инструмент. Создать заявку на ремонт'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 17
+          required: true
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 17
+        -
+          in: query
+          name: tool
+          description: 'ID инструмента'
+          example: 1
+          required: true
+          schema:
+            type: integer
+            description: 'ID инструмента'
+            example: 1
+        -
+          in: query
+          name: repairing_organization
+          description: 'Описание организации, осуществляющей ремонт'
+          example: sit
+          required: false
+          schema:
+            type: string
+            description: 'Описание организации, осуществляющей ремонт'
+            example: sit
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/tool/create-return-repair:
+    post:
+      summary: 'Инструмент. Оформить возврат с ремонта'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 6
+          required: true
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 6
+        -
+          in: query
+          name: tool
+          description: 'ID инструмента'
+          example: 8
+          required: true
+          schema:
+            type: integer
+            description: 'ID инструмента'
+            example: 8
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/material/get-capitalize-data:
+    get:
+      summary: 'Материал. Получить значения по оприходованию'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/material/get-transfer-data:
+    get:
+      summary: 'Материал. Получить значения по перемещению'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/material/get-writeoff-data:
+    get:
+      summary: 'Материал. Получить значения по списанию'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/material/create-capitalize:
+    post:
+      summary: 'Материал. Создать оприходование'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: provider
+          description: 'ID поставщика'
+          example: 1
+          required: true
+          schema:
+            type: integer
+            description: 'ID поставщика'
+            example: 1
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 14
+          required: false
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 14
+        -
+          in: query
+          name: building
+          description: 'ID объекта'
+          example: 8
+          required: false
+          schema:
+            type: integer
+            description: 'ID объекта'
+            example: 8
+        -
+          in: query
+          name: employee
+          description: 'ID сотрудника'
+          example: 16
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника'
+            example: 16
+        -
+          in: query
+          name: materials
+          description: "Материалы (в формате json)\nПример: \"materials\": [{\"id\": int, \"price\": number, \"amount\": int}]"
+          example: []
+          required: true
+          schema:
+            type: object
+            description: "Материалы (в формате json)\nПример: \"materials\": [{\"id\": int, \"price\": number, \"amount\": int}]"
+            example: []
+            properties: []
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/material/create-transfer:
+    post:
+      summary: 'Материал. Создать перемещение'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: material
+          description: 'ID Материала'
+          example: 8
+          required: true
+          schema:
+            type: integer
+            description: 'ID Материала'
+            example: 8
+        -
+          in: query
+          name: building_from
+          description: 'ID объекта (откуда)'
+          example: 18
+          required: false
+          schema:
+            type: integer
+            description: 'ID объекта (откуда)'
+            example: 18
+        -
+          in: query
+          name: employee_from
+          description: 'ID сотрудника (откуда)'
+          example: 12
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника (откуда)'
+            example: 12
+        -
+          in: query
+          name: store_from
+          description: 'ID склада (откуда)'
+          example: 3
+          required: false
+          schema:
+            type: integer
+            description: 'ID склада (откуда)'
+            example: 3
+        -
+          in: query
+          name: building
+          description: 'ID объекта (куда)'
+          example: 1
+          required: true
+          schema:
+            type: integer
+            description: 'ID объекта (куда)'
+            example: 1
+        -
+          in: query
+          name: employee
+          description: 'ID сотрудника (куда)'
+          example: 9
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника (куда)'
+            example: 9
+        -
+          in: query
+          name: store
+          description: 'ID склада (куда)'
+          example: 20
+          required: false
+          schema:
+            type: integer
+            description: 'ID склада (куда)'
+            example: 20
+        -
+          in: query
+          name: amount
+          description: 'Количество материала'
+          example: 11
+          required: true
+          schema:
+            type: integer
+            description: 'Количество материала'
+            example: 11
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/material/create-writeoff:
+    post:
+      summary: 'Материал. Создать списание'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: query
+          name: material
+          description: 'ID материала'
+          example: 15
+          required: true
+          schema:
+            type: integer
+            description: 'ID материала'
+            example: 15
+        -
+          in: query
+          name: store
+          description: 'ID склада'
+          example: 17
+          required: false
+          schema:
+            type: integer
+            description: 'ID склада'
+            example: 17
+        -
+          in: query
+          name: building
+          description: 'ID объекта'
+          example: 1
+          required: false
+          schema:
+            type: integer
+            description: 'ID объекта'
+            example: 1
+        -
+          in: query
+          name: employee
+          description: 'ID сотрудника'
+          example: 7
+          required: false
+          schema:
+            type: integer
+            description: 'ID сотрудника'
+            example: 7
+        -
+          in: query
+          name: materials
+          description: "Материалы (в формате json)\nПример: \"materials\": [{\"id\": int, \"amount\": int}]"
+          example: []
+          required: true
+          schema:
+            type: object
+            description: "Материалы (в формате json)\nПример: \"materials\": [{\"id\": int, \"amount\": int}]"
+            example: []
+            properties: []
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/device/user/get-info:
+    get:
+      summary: 'Получить информацию о текущем пользователе'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/user/get-widgets:
+    get:
+      summary: 'Получить виджеты для пользователя'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses:
+        400:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  error:
+                    code: 2002
+                    message: 'Устройство не найдено'
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: integer
+                        example: 2002
+                      message:
+                        type: string
+                        example: 'Устройство не найдено'
+      tags:
+        - Endpoints
+      security: []
+  /api/device/user/set-pin:
+    post:
+      summary: 'Установить пин-код'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pin:
+                  type: string
+                  description: ''
+                  example: corrupti
+              required:
+                - pin
+      security: []
+  /api/device/user/enter-pin:
+    post:
+      summary: 'Войти по пин-коду или отпечатку пальцев'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pin:
+                  type: string
+                  description: ''
+                  example: earum
+                fingerprint:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - pin
+      security: []
+  /api/device/user/auth:
+    post:
+      summary: 'Авторизовать пользователя'
+      operationId: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: auth-token
+          description: ''
+          example: 'auth-token (исключая /user/auth)'
+          schema:
+            type: string
+        -
+          in: header
+          name: device-id
+          description: ''
+          example: 'device-id (исключая /user/auth)'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                  description: ''
+                  example: ea
+                password:
+                  type: string
+                  description: ''
+                  example: '{GzC1enp=o'
+                device_id:
+                  type: string
+                  description: ''
+                  example: quidem
+                device_model:
+                  type: string
+                  description: ''
+                  example: dignissimos
+                app_version:
+                  type: string
+                  description: ''
+                  example: expedita
+              required:
+                - login
+                - password
+                - device_id
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
